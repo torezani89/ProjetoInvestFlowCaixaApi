@@ -66,13 +66,11 @@ dotnet ef database update
 Se a aplicação estiver rodando em containers Docker, ajuste a connection string em *docker-compose.yaml* para apontar para o serviço do banco de dados.
 
 ```
-      # Modelo de Connection string para sobrescrever a do appsettings.json (conexão com SQL Server na máquina host):
-      ConnectionStrings__DefaultConnection:
-           "Server=host.docker.internal;Database=InvestFlowCaixaDb;User Id=sa;Password=SenhaForte123;TrustServerCertificate=True;"
+      # Modelo de Connection string para sobrescrever a do appsettings.json:
+      ConnectionStrings__DefaultConnection: "Server=host.docker.internal;Database=InvestFlowCaixaDb;User Id=sa;Password=SenhaForte123;TrustServerCertificate=True;"
 
-      # Modelo de connection string para usar com SQL Server em container Docker:
-      ConnectionStrings__DefaultConnection:
-        "Server=sqlserver,1433;Database=InvestFlowCaixaDb;User Id=sa;Password=SenhaForte123!;TrustServerCertificate=True;"
+      # Modelo de connection string para usar com SQL Server rodando em container Docker:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=InvestFlowCaixaDb;User Id=sa;Password=SenhaForte123!;TrustServerCertificate=True;"
 ```
 ---
 
@@ -85,7 +83,7 @@ dotnet run --project InvestFlowCaixa.Api
 A API iniciará em:
 
 * **[https://localhost:7226](https://localhost:7226)**
-* **[http://localhost:5226](http://localhost:5226)**
+* **[http://localhost:5057](http://localhost:5057)**
 
 ---
 
