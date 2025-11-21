@@ -5,14 +5,14 @@ Se quiser, posso gerar também a versão em inglês ou mais detalhada.
 
 ---
 
-# 📘 InvestFlowCaixa.Api — README
+# InvestFlowCaixa.Api — README
 
 API do projeto **InvestFlowCaixa**, responsável por gerenciar clientes, investimentos, simulações e telemetria.
 Este guia explica como **executar**, **configurar** e **testar** a API localmente.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * **.NET 8**
 * **ASP.NET Core Web API**
@@ -42,7 +42,7 @@ InvestFlowCaixa/
 Antes de rodar o projeto, instale:
 
 * ✔️ **.NET SDK 8**
-* ✔️ **SQL Server** (local ou Docker)
+* ✔️ **SQL Server** (local)
 * ✔️ **Visual Studio / VSCode** (opcional)
 
 ---
