@@ -37,17 +37,17 @@ InvestFlowCaixa/
 
 ---
 
-## 🛠 Pré-requisitos
+## Pré-requisitos
 
 Antes de rodar o projeto, instale:
 
-* ✔️ **.NET SDK 8**
-* ✔️ **SQL Server** (local)
-* ✔️ **Visual Studio / VSCode** (opcional)
+* **.NET SDK 8**
+* **SQL Server** (local)
+* **Visual Studio / VSCode** (opcional)
 
 ---
 
-## 🗄 Configurando a Base de Dados
+## Configurando a Base de Dados
 
 No *appsettings.json* da API, configure sua connection string:
 
@@ -79,7 +79,7 @@ A API iniciará em:
 
 ---
 
-## 📘 Testando via Swagger
+## Testando via Swagger
 
 Com a API rodando, abra no navegador:
 
@@ -98,9 +98,9 @@ Se algum endpoint exigir **JWT**, o Swagger exibirá um ícone de cadeado 🔒.
 
 ---
 
-## 📈 Endpoints Principais
+## Endpoints Principais
 
-### 📍 Clientes
+### Clientes
 
 ```
 POST /api/clientes
@@ -116,7 +116,7 @@ POST /api/simulacoes
 GET  /api/simulacoes/{id}
 ```
 
-### 📍 Histórico de Investimentos
+### Histórico de Investimentos
 
 ```
 GET /investimentos/{clienteId}
