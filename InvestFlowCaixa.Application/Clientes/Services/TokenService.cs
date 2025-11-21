@@ -39,7 +39,7 @@ namespace InvestFlowCaixa.Application.Clientes.Services
             var token = new JwtSecurityToken(
                 claims: claims, // informações do usuário que vão dentro do token.
                 expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(jwtSettings["ExpirationMinutes"])),
-                //expires: DateTime.Now.AddDays(1), // data de expiração → 1 dia a partir de agora.
+                //expires: DateTime.Now.AddDays(1),
                 issuer: jwtSettings["Issuer"],
                 audience: jwtSettings["Audience"],
                 signingCredentials: credentials // assinatura com a chave secreta (Chave Simétrica) e o algoritmo escolhido (HmacSha512).

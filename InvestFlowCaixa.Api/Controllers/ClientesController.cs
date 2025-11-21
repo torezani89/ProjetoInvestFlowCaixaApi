@@ -1,5 +1,6 @@
 ﻿using InvestFlowCaixa.Application.Clientes.Dtos;
 using InvestFlowCaixa.Application.Clientes.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InvestFlowCaixa.Api.Controllers
@@ -103,6 +104,7 @@ namespace InvestFlowCaixa.Api.Controllers
         /// Possíveis erros:
         /// - 404: "Cliente com ID X não encontrado."  
         /// </remarks>
+        [Authorize]
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Atualizar(int id, [FromBody] ClienteAtualizacaoDto dto)
         {
@@ -119,6 +121,7 @@ namespace InvestFlowCaixa.Api.Controllers
         /// Possíveis erros:
         /// - 404: "Cliente com ID X não encontrado."
         /// </remarks>
+        [Authorize]
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Remover(int id)
         {

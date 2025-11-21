@@ -19,7 +19,7 @@ namespace InvestFlowCaixa.Domain.Entities
         [Range(0, double.MaxValue)]
         public decimal RendaMensal { get; set; }
 
-        // Informações comportamentais (para perfil dinâmico)
+        // Dados para análise de perfil de risco
         [Range(0, int.MaxValue)]
         public decimal VolumeInvestimentos { get; set; }
 
@@ -35,6 +35,7 @@ namespace InvestFlowCaixa.Domain.Entities
         [Range(0, 100)]
         public int Score { get; set; }
         public int PerfilId { get; set; }
+
         public string Token { get; set; } = string.Empty;
         public byte[] SenhaHash { get; set; } = new byte[0];
         public byte[] SenhaSalt { get; set; } = new byte[0];

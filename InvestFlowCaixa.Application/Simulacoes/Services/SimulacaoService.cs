@@ -72,7 +72,7 @@ namespace InvestFlowCaixa.Application.Simulacoes.Services
             // selecionar melhor produto
             var produtoSelecionado = _produtoService.SelecionarMelhorProduto(elegiveis, perfilCliente);
 
-            // conversão de taxa anual → mensal
+            // conversão de taxa anual para mensal
             decimal taxaMensal =
                 (decimal)(Math.Pow(1 + (double)produtoSelecionado.Rentabilidade, 1.0 / 12.0) - 1);
 

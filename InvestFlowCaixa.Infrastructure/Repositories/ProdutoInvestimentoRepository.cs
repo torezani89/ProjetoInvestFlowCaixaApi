@@ -15,7 +15,6 @@ namespace InvestFlowCaixa.Infrastructure.Repositories
         {
         }
 
-        //var produtosDoTipo = await _produtoRepo.GetByTipoAsync(request.TipoProduto);
         public async Task<IEnumerable<ProdutoInvestimento>> GetByTipoAsync(string tipo)
         {
             return await _context.ProdutosInvestimento

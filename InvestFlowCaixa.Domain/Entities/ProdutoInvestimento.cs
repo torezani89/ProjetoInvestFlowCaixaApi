@@ -13,17 +13,17 @@ namespace InvestFlowCaixa.Domain.Entities
 
         [Required]
         [MaxLength(50)]
-        public string Tipo { get; set; } // Ex: "CDB", "LCI", "Tesouro"
+        public string Tipo { get; set; }
 
         [Range(0, double.MaxValue)]
-        public decimal Rentabilidade { get; set; } // Ex: 0.12
+        public decimal Rentabilidade { get; set; }
 
         [Required]
         [MaxLength(20)]
-        public string Risco { get; set; } // "Baixo", "Moderado", "Alto"
+        public string Risco { get; set; }
 
         [MaxLength(20)]
-        public string Liquidez { get; set; } // Ex: "D+1"
+        public string Liquidez { get; set; }
 
         public decimal MinValor { get; set; }
         public int MaxPrazoMeses { get; set; }

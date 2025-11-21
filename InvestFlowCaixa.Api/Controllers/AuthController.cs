@@ -24,6 +24,9 @@ namespace InvestFlowCaixa.Api.Controllers
         /// }
         /// </pre>
         /// Outros CPFs para teste: 22222222222, 33333333333. A senha também é 123.
+        /// <para>
+        /// Por se tratar de um projeto de teste, a autenticação foi aplicada apenas a algumas rotas, com o objetivo de facilitar o uso e a navegação pela API.
+        /// </para>
         /// </remarks>
         [HttpPost("autenticar")]
         public async Task<IActionResult> Autenticar([FromBody] AuthRequestDto dto)

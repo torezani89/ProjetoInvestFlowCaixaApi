@@ -31,9 +31,7 @@ namespace InvestFlowCaixa.Application.PerfilRisco.Services
             };
         }
 
-        // ------------------------------------------------------------
         //  Análise de Perfil baseado no score total
-        // ------------------------------------------------------------
         public (string Nome, string Descricao, int Score) AnalisarPerfil(Cliente cliente)
         {
             int score = CalcularScore(cliente);
@@ -47,9 +45,7 @@ namespace InvestFlowCaixa.Application.PerfilRisco.Services
             return ("Agressivo", "Busca por alta rentabilidade assumindo maior risco.", score);
         }
 
-        // ------------------------------------------------------------
         //  Cálculo simplificado da pontuação
-        // ------------------------------------------------------------
         private int CalcularScore(Cliente cliente)
         {
             double volumeScore = CalcularScoreVolume(cliente.VolumeInvestimentos);

@@ -17,7 +17,7 @@ namespace InvestFlowCaixa.Domain.Entities
 
         [Required]
         [MaxLength(50)]
-        public string Tipo { get; set; } // CDB, Fundo, Tesouro, etc.
+        public string Tipo { get; set; }
 
         [Range(0, double.MaxValue)]
         public decimal Valor { get; set; }

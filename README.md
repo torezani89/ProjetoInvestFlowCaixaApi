@@ -1,7 +1,6 @@
 # ProjetoInvestFlowCaixaApi
 
-Aqui está um **README.md** simples, direto e adequado para testar a API **InvestFlowCaixa.Api**.
-Se quiser, posso gerar também a versão em inglês ou mais detalhada.
+link do repositório público: https://github.com/torezani89/ProjetoInvestFlowCaixaApi
 
 ---
 
@@ -64,6 +63,17 @@ cd InvestFlowCaixa.Api
 dotnet ef database update
 ```
 
+Se a aplicação estiver rodando em containers Docker, ajuste a connection string em *docker-compose.yaml* para apontar para o serviço do banco de dados.
+
+```
+      # Modelo de Connection string para sobrescrever a do appsettings.json (conexão com SQL Server na máquina host):
+      ConnectionStrings__DefaultConnection:
+           "Server=host.docker.internal;Database=InvestFlowCaixaDb;User Id=sa;Password=SenhaForte123;TrustServerCertificate=True;"
+
+      # Modelo de connection string para usar com SQL Server em container Docker:
+      ConnectionStrings__DefaultConnection:
+        "Server=sqlserver,1433;Database=InvestFlowCaixaDb;User Id=sa;Password=SenhaForte123!;TrustServerCertificate=True;"
+```
 ---
 
 ## Como executar a API
@@ -133,11 +143,26 @@ GET /telemetria
 ## Autenticação
 
 Enviar JWT no header:
+- Por se tratar de um projeto de teste, a autenticação foi aplicada apenas a algumas rotas, com o objetivo de facilitar o uso e a navegação pela API.
+- Logar através da rota "/api/Auth/autenticar" para gerar o token na reposta da requisição.
+- Utilize dados dos clientes criados via seed para fazer o login.
+```
+{
+"cpf": "11111111111",
+"senha": "123"
+}
+``` 
+
+- Outros CPFs para teste: 22222222222, 33333333333. A senha também é 123.
+
 ```
 Authorization: Bearer <token>
+
 ```
-Apenas colar o token, não escrever "Bearer".
+OBS: Colar apenas o token no autenticador, não é necessário escrever a palavra "Bearer".
+
 ---
+
 
 ## Contribuição
 

@@ -75,7 +75,6 @@ namespace InvestFlowCaixa.Api.Controllers
             return Ok(result);
         }
 
-
         /// <summary>
         /// Retorna os detalhes de uma simulação específica.
         /// </summary>
@@ -104,6 +103,7 @@ namespace InvestFlowCaixa.Api.Controllers
         /// }
         /// </pre>
         /// </remarks>
+        [Authorize]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> ObterDetalhes(int id)
         {
@@ -120,11 +120,6 @@ namespace InvestFlowCaixa.Api.Controllers
         /// </summary>
         /// <response code="200">Lista paginada de simulações.</response>
         /// <remarks>
-        /// Exemplo de request:
-        /// <pre>
-        /// GET /api/simular-investimento?page=1&pageSize=10
-        /// </pre>
-        ///
         /// Exemplo de resposta:
         /// <pre>
         /// {

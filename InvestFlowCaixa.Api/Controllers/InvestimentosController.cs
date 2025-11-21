@@ -1,4 +1,5 @@
 ﻿using InvestFlowCaixa.Application.HistoricoInvestimentos.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InvestFlowCaixa.Api.Controllers
@@ -49,6 +50,7 @@ namespace InvestFlowCaixa.Api.Controllers
         /// - 400: "ClienteId inválido."  
         /// - 404: "Nenhum investimento encontrado para o cliente informado."  
         /// </remarks>
+        [Authorize]
         [HttpGet("{clienteId}")]
         public async Task<IActionResult> GetHistorico(int clienteId)
         {

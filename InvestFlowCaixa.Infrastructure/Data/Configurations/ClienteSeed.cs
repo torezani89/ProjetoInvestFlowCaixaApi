@@ -46,6 +46,7 @@ namespace InvestFlowCaixa.Infrastructure.Data.Configurations
                     PreferenciaLiquidez = 9,
                     PreferenciaRentabilidade = 2,
                     PerfilId = 1,
+                    Score = 19,
                     SenhaHash = senhaHash,
                     SenhaSalt = senhaSalt
                 },
@@ -60,6 +61,7 @@ namespace InvestFlowCaixa.Infrastructure.Data.Configurations
                     PreferenciaLiquidez = 5,
                     PreferenciaRentabilidade = 5,
                     PerfilId = 2,
+                    Score = 46,
                     SenhaHash = senhaHash,
                     SenhaSalt = senhaSalt
                 },
@@ -74,6 +76,7 @@ namespace InvestFlowCaixa.Infrastructure.Data.Configurations
                     PreferenciaLiquidez = 1,
                     PreferenciaRentabilidade = 9,
                     PerfilId = 3,
+                    Score = 76,
                     SenhaHash = senhaHash,
                     SenhaSalt = senhaSalt
                 }

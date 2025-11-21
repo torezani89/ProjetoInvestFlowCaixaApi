@@ -29,7 +29,6 @@ namespace InvestFlowCaixa.Application.Clientes.Services
 
         public async Task<ClienteRespostaDto> ObterPorIdAsync(int id)
         {
-            //throw new KeyNotFoundException("erro lançado no service para teste");
             _logger.LogInformation("Buscando cliente com ID {Id}", id);
 
             var cliente = await _clienteRepo.ObterClienteComPerfil(id);
