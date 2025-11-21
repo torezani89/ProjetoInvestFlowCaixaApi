@@ -28,10 +28,10 @@ Este guia explica como **executar**, **configurar** e **testar** a API localment
 ```
 InvestFlowCaixa/
  ├─ InvestFlowCaixa.Api/           → Camada de API
- ├─ InvestFlowCaixa.Application/   → Regras de negócio / UseCases
+ ├─ InvestFlowCaixa.Application/   → Regras de negócio
  ├─ InvestFlowCaixa.Domain/        → Entidades e interfaces
  ├─ InvestFlowCaixa.Infrastructure/→ Repositórios e EF Core
- └─ InvestFlowCaixa.Tests/         → Testes unitários e integração
+ └─ InvestFlowCaixa.Tests/         → Testes unitários
 ```
 
 ---
