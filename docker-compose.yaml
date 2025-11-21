@@ -1,0 +1,74 @@
+version: "3.9"
+
+# services:
+#   api:
+#     build:
+#       context: .
+#       dockerfile: InvestFlowCaixa.Api/Dockerfile
+#     container_name: investflow_api
+#     ports:
+#       - "8080:8080"
+#       - "8081:8081"
+#     depends_on:
+#       - sqlserver
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Development
+#       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=InvestFlowDb;User=sa;Password=Your_password123;TrustServerCertificate=True;
+#     command: >
+#       bash -c "
+#         dotnet ef database update &&
+#         dotnet InvestFlowCaixa.Api.dll"
+
+#   sqlserver:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     container_name: investflow_sql
+#     ports:
+#       - "1433:1433"
+#     environment:
+#       - ACCEPT_EULA=Y
+#       - MSSQL_SA_PASSWORD=Your_password123!
+#     volumes:
+#       - sql_data:/var/opt/mssql
+#     restart: unless-stopped
+
+# volumes:
+#   sql_data:
+
+# services:
+#   sqlserver:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     container_name: investflow_sql
+#     ports:
+#       - "1433:1433"
+#     environment:
+#       ACCEPT_EULA: "Y"
+#       MSSQL_SA_PASSWORD: "Your_password123!"
+#     volumes:
+#       - sql_data:/var/opt/mssql
+#     healthcheck:
+#       test: [ "CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "Your_password123!", "-Q", "SELECT 1" ]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 10
+#       start_period: 20s
+#     restart: unless-stopped
+
+#   api:
+#     container_name: investflow_api
+#     build:
+#       context: .                raiz da solution
+#       dockerfile: InvestFlowCaixa.Api/Dockerfile
+#     depends_on:
+#       sqlserver:
+#         condition: service_healthy
+#     environment:
+#       ASPNETCORE_ENVIRONMENT: "Development"
+#       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=InvestFlowDb;User=sa;Password=Your_password123!;TrustServerCertificate=True;"
+#     ports:
+#       - "8080:8080"
+#       - "8081:8081"
+#     restart: unless-stopped
+
+# volumes:
+#   sql_data:
+
