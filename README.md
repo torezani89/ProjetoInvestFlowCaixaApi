@@ -132,11 +132,11 @@ GET /telemetria
 
 ## Autenticação
 
-Enviar JWT no header: colar apenas o <token>, não escrever "Bearer".
+Enviar JWT no header:
 ```
 Authorization: Bearer <token>
 ```
-
+Apenas colar o token, não escrever "Bearer".
 ---
 
 ## Contribuição
